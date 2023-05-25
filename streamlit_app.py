@@ -48,7 +48,7 @@ def render_pie_simple():
         options=options, height="600px",
     )
 
-render_pie_simple
+render_pie_simple()
 
 def render_gentree():
     option = {
