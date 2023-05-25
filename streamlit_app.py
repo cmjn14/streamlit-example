@@ -17,53 +17,38 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
-def render_basic_tree():
-    with open("./data/flare.json", "r") as f:
-        data = json.loads(f.read())
-
-    for idx, _ in enumerate(data["children"]):
-        data["children"][idx]["collapsed"] = idx % 2 == 0
-
-    option = {
-        "tooltip": {"trigger": "item", "triggerOn": "mousemove"},
+def render_pie_simple():
+    options = {
+        "title": {"text": "某站点用户访问来源", "subtext": "纯属虚构", "left": "center"},
+        "tooltip": {"trigger": "item"},
+        "legend": {"orient": "vertical", "left": "left",},
         "series": [
             {
-                "type": "tree",
-                "data": [data],
-                "top": "1%",
-                "left": "7%",
-                "bottom": "1%",
-                "right": "20%",
-                "symbolSize": 7,
-                "label": {
-                    "position": "left",
-                    "verticalAlign": "middle",
-                    "align": "right",
-                    "fontSize": 9,
-                },
-                "leaves": {
-                    "label": {
-                        "position": "right",
-                        "verticalAlign": "middle",
-                        "align": "left",
+                "name": "访问来源",
+                "type": "pie",
+                "radius": "50%",
+                "data": [
+                    {"value": 1048, "name": "搜索引擎"},
+                    {"value": 735, "name": "直接访问"},
+                    {"value": 580, "name": "邮件营销"},
+                    {"value": 484, "name": "联盟广告"},
+                    {"value": 300, "name": "视频广告"},
+                ],
+                "emphasis": {
+                    "itemStyle": {
+                        "shadowBlur": 10,
+                        "shadowOffsetX": 0,
+                        "shadowColor": "rgba(0, 0, 0, 0.5)",
                     }
                 },
-                "emphasis": {"focus": "descendant"},
-                "expandAndCollapse": True,
-                "animationDuration": 550,
-                "animationDurationUpdate": 750,
             }
         ],
     }
-    st_echarts(option, height="500px")
+    st_echarts(
+        options=options, height="600px",
+    )
 
-
-ST_TREE_DEMOS = {
-    "Tree: From Left to Right Tree": (
-        render_basic_tree,
-        "https://echarts.apache.org/examples/en/editor.html?c=tree-basic",
-    ),
-}
+render_pie_simple
 
 def render_gentree():
     option = {
