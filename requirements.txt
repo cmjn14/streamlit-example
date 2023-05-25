@@ -2,3 +2,4 @@ altair
 pandas
 streamlit
 drawsvg
+streamlit-echarts>=0.4.0
