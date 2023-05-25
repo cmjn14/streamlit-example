@@ -1,6 +1,5 @@
 from collections import namedtuple
 import altair as alt
-import drawsvg as dw
 import math
 import pandas as pd
 import streamlit as st
