@@ -1,4 +1,5 @@
 from collections import namedtuple
+from streamlit_echarts import st_echarts
 import altair as alt
 import drawsvg as dw
 import math
