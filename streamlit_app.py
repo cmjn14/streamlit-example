@@ -17,6 +17,17 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
+def render_gentree():
+    option = {
+        "title": {"text": "Arbre généalogique"},
+        "series": [
+            {
+                "type": "tree",
+                "data": [],
+            }
+        ]
+    }
+    st_echarts(option, height="500px")
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
@@ -38,3 +49,5 @@ with st.echo(code_location='below'):
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+
+    render_gentree
