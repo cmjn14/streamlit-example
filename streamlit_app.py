@@ -64,7 +64,7 @@ def render_scatter():
             "name": "Punch Card",
             "type": "scatter",
             "coordinateSystem": "polar",
-            "symbolSize": "function (val) { return val[2] * 2;}"
+            "symbolSize": "function (val) { return val[2] * 2;}",
             "data": data,
             "animationDelay": "function (idx) { return idx * 5; }"
         }]
