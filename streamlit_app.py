@@ -33,7 +33,7 @@ def render_scatter():
         },
         "polar": {},
         "tooltip": {
-            "formatter": "function (params) {return params.value[2] + ' commits in ' + hours[params.value[1]] + ' of ' + days[params.value[0]]; }"
+            "formatter": "function (params) {return params.value[2]; }"
         },
         "angleAxis": {
             "type": "category",
