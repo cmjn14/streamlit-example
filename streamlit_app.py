@@ -38,23 +38,23 @@ def render_scatter():
         "angleAxis": {
             "type": "category",
             "data": hours,
-            "boundaryGap": false,
+            "boundaryGap": False,
             "splitLine": {
-                "show": true,
+                "show": True,
                 "lineStyle": {
                     "color": "#999",
                     "type": "dashed"
                 }
             },
             "axisLine": {
-                "show": false
+                "show": False
             }
         },
         "radiusAxis": {
             "type": "category",
             "data": days,
             "axisLine": {
-                "show": false
+                "show": False
             },
             "axisLabel": {
                 "rotate": 45
