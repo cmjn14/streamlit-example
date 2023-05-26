@@ -33,7 +33,7 @@ def render_scatter():
         },
         "polar": {},
         "tooltip": {
-            "formatter": "function (params) {return params.value[2] }"
+            "formatter": "{value}%"
         },
         "angleAxis": {
             "type": "category",
