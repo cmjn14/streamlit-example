@@ -33,9 +33,7 @@ def render_scatter():
         },
         "polar": {},
         "tooltip": {
-            "formatter": function (params) {
-                return params.value[2] + ' commits in ' + hours[params.value[1]] + ' of ' + days[params.value[0]];
-            }
+            "formatter": "function (params) {return params.value[2] + ' commits in ' + hours[params.value[1]] + ' of ' + days[params.value[0]]; }"
         },
         "angleAxis": {
             "type": "category",
@@ -66,13 +64,9 @@ def render_scatter():
             "name": "Punch Card",
             "type": "scatter",
             "coordinateSystem": "polar",
-            "symbolSize": function (val) {
-                return val[2] * 2;
-            },
+            "symbolSize": "function (val) { return val[2] * 2;}"
             "data": data,
-            "animationDelay": function (idx) {
-                return idx * 5;
-            }
+            "animationDelay": "function (idx) { return idx * 5; }"
         }]
     }
     st_echarts(
