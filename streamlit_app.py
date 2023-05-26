@@ -33,7 +33,7 @@ def render_scatter():
         },
         "polar": {},
         "tooltip": {
-            "formatter": "function (params) {return params.value[2] }"
+            "formatter": "function (params) {return params[2] }"
         },
         "angleAxis": {
             "type": "category",
@@ -64,7 +64,7 @@ def render_scatter():
             "name": "Punch Card",
             "type": "scatter",
             "coordinateSystem": "polar",
-            "symbolSize": "function (params) {return params.value[2] }",
+            "symbolSize": "function (params) {return params[2] }",
             "data": data,
             "animationDelay": 0
         }]
