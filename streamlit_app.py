@@ -57,7 +57,7 @@ def render_scatter():
             }
         },
         "radiusAxis": {
-            "type": "continuous",
+            "type": "value",
             "min": 1800,
             "max": 2000,
             "inverse": True,
