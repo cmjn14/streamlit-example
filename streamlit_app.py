@@ -20,8 +20,10 @@ In the meantime, below is an example of what you can do with just a few lines of
 # Calcul distances et angle à partir des coordonnées : https://www.movable-type.co.uk/scripts/latlong.html
 # Python GEDCOM parser : https://pypi.org/project/python-gedcom/
 
+
+
 def gene_from_sosa(sosa):
-    result = int(math.log(sosa,2) + 1
+    result = int(math.log(sosa,2)) + 1
     return result
 
 gene_from_sosa(94)
