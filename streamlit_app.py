@@ -64,8 +64,12 @@ get_angle(4)
 get_angle(5)
 get_angle(6)
 get_angle(7)
+get_angle(8)
+get_angle(15)
+get_angle(64)
+get_angle(127)
     
-get_order_in_generation(30)
+
                  
                      
 def render_scatter():
