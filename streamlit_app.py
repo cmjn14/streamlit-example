@@ -27,7 +27,7 @@ def generation_from_sosa(sosa):
 
 def order_in_generation(sosa):
     generation = generation_from_sosa(sosa)
-    order = sosa - 2 ** (generation - 1)
+    order = sosa - (2 ** (generation - 1))
     order
     return order
     
