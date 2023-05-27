@@ -37,7 +37,7 @@ def get_order_in_generation(sosa):
     return order
 
 def get_angle(sosa):
-    print("---")
+    st.write("---")
     generation = get_generation(sosa)
     number_in_generation = 2 ** (generation - 1)
     if sosa > 1:
