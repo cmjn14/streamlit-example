@@ -33,7 +33,7 @@ def get_order_in_generation(sosa):
     order
     return order
 
-def get_angle(sosa):
+def get_angle(sosa, theta0):
     # tbd
     pass
 
