@@ -38,6 +38,7 @@ def get_order_in_generation(sosa):
 
 def get_angle(sosa):
     st.write("---")
+    st.write("sosa " + sosa)
     generation = get_generation(sosa)
     number_in_generation = 2 ** (generation - 1)
     if sosa > 1:
@@ -56,9 +57,13 @@ def get_angle(sosa):
     else:
         return 0
     # thota_sosa in degrees
-
-st.write(get_angle(2))
-st.write(get_angle(3))
+    
+get_angle(2)
+get_angle(3)
+get_angle(4)
+get_angle(5)
+get_angle(6)
+get_angle(7)
     
 get_order_in_generation(30)
                  
