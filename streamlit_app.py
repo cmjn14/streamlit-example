@@ -63,7 +63,8 @@ get_angle(8)
 get_angle(15)
 get_angle(64)
 get_angle(127)
-    
+get_angle(128)
+get_angle(256)
 
                  
                      
