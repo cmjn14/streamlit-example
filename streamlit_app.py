@@ -57,8 +57,8 @@ def get_angle(sosa):
         return 0
     # thota_sosa in degrees
 
-get_angle(2)
-get_angle(3)
+st.write(get_angle(2))
+st.write(get_angle(3))
     
 get_order_in_generation(30)
                  
