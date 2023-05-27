@@ -8,7 +8,6 @@ import streamlit as st
 
 """
 # Welcome to Streamlit!
-e
 Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
 
 If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
@@ -24,7 +23,7 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 def gene_from_sosa(sosa):
     result = int(math.log(sosa,2)) + 1
-    return result
+    result
 
 gene_from_sosa(94)
                  
