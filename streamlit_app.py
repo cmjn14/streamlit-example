@@ -1,7 +1,7 @@
 from collections import namedtuple
 from streamlit_echarts import st_echarts
 import altair as alt
-import drawsvg as dw
+# import drawsvg as dw
 import math
 import pandas as pd
 import streamlit as st
@@ -38,7 +38,7 @@ def get_order_in_generation(sosa):
 
 def get_angle(sosa):
     st.write("---")
-    st.write("sosa " + sosa)
+    st.write("sosa ", sosa)
     generation = get_generation(sosa)
     number_in_generation = 2 ** (generation - 1)
     if sosa > 1:
