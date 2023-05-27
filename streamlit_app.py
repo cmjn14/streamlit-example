@@ -21,11 +21,17 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 
 
-def gene_from_sosa(sosa):
-    result = int(math.log(sosa,2)) + 1
-    result
+def generation_from_sosa(sosa):
+    generation = int(math.log(sosa,2)) + 1
+    return generation
 
-gene_from_sosa(94)
+def order_in_generation(sosa):
+    generation = generation_from_sosa(sosa)
+    order = sosa - 2 ** (generation - 1)
+    order
+    return order
+    
+order_in_generation(2)
                  
                      
 def render_scatter():
