@@ -46,7 +46,7 @@ def render_scatter():
             "data": hours,
             "boundaryGap": False,
             "splitLine": {
-                "show": True,
+                "show": False,
                 "lineStyle": {
                     "color": "#999",
                     "type": "dashed"
@@ -58,7 +58,7 @@ def render_scatter():
         },
         "radiusAxis": {
             "type": "value",
-            "min": 1800,
+            "min": 1700,
             "max": 2000,
             "inverse": True,
             "axisLine": {
@@ -78,7 +78,7 @@ def render_scatter():
         }]
     }
     st_echarts(
-        options=options, height="600px",
+        options=options, height="800px",
     )
 
 render_scatter()
