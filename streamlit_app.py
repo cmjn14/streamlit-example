@@ -20,7 +20,12 @@ In the meantime, below is an example of what you can do with just a few lines of
 # Calcul distances et angle à partir des coordonnées : https://www.movable-type.co.uk/scripts/latlong.html
 # Python GEDCOM parser : https://pypi.org/project/python-gedcom/
 
+def gene_from_sosa(sosa):
+    generation = int(math.log(sosa,2) + 1
+    return generation
 
+print (gene_from_sosa(94))
+                     
 def render_scatter():
     hours = ['12a', '1a', '2a', '3a', '4a', '5a', '6a', '7a', '8a', '9a','10a','11a','12p', '1p', '2p', '3p', '4p', '5p', '6p', '7p', '8p', '9p', '10p', '11p']
     days = ['Saturday', 'Friday', 'Thursday', 'Wednesday', 'Tuesday', 'Monday', 'Sunday']
@@ -28,6 +33,7 @@ def render_scatter():
     data1 = [
         {"sosa": 2, "first": "Cédric", "last": "Lopez", "birth": {"year": 1973, "place": "Evreux"}} 
     ]
+            
     options = {
         "title": {
             "text": "Punch Card of Github",
@@ -65,7 +71,7 @@ def render_scatter():
                 "show": True
             },
             "axisLabel": {
-                "rotate": 45
+                "rotate": 0
             }
         },
         "series": [{
