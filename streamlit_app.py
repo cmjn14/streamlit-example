@@ -50,6 +50,7 @@ def get_angle(sosa):
         order = get_order_in_generation(sosa)
         order
         theta_sosa = theta_start + theta_delta * order
+        st.write("result")
         theta_sosa
         return theta_sosa
     else:
