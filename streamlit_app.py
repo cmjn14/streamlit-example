@@ -19,7 +19,9 @@ In the meantime, below is an example of what you can do with just a few lines of
 # Calcul distances et angle à partir des coordonnées : https://www.movable-type.co.uk/scripts/latlong.html
 # Python GEDCOM parser : https://pypi.org/project/python-gedcom/
 
-
+# initial angle between sosa 2 and 3, in degrees
+theta0 = 30
+final_year = 2000
 
 def get_generation(sosa):
     generation = int(math.log(sosa,2)) + 1
@@ -80,7 +82,7 @@ def render_scatter():
         "radiusAxis": {
             "type": "value",
             "min": 1700,
-            "max": 2000,
+            "max": final_year,
             "inverse": True,
             "axisLine": {
                 "show": True
