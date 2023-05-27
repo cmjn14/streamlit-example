@@ -60,7 +60,7 @@ def render_scatter():
             "type": "continuous",
             "min": 1800,
             "max": 2000,
-            "reverse": True,
+            "inverse": True,
             "axisLine": {
                 "show": True
             },
