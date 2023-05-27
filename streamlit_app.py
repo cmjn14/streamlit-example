@@ -19,26 +19,38 @@ In the meantime, below is an example of what you can do with just a few lines of
 # Calcul distances et angle à partir des coordonnées : https://www.movable-type.co.uk/scripts/latlong.html
 # Python GEDCOM parser : https://pypi.org/project/python-gedcom/
 
-# initial angle between sosa 2 and 3, in degrees
-theta0 = 30
+# initial angle between sosa 2 and 3 (generation 2), in degrees
+theta2 = 30
 final_year = 2000
 
 def get_generation(sosa):
+    # sosa 1 = generation 1
     generation = int(math.log(sosa,2)) + 1
     return generation
 
 def get_order_in_generation(sosa):
-    # starting 0
+    # order starting at 0 for each generation
     # used to determine angle in the graph
     generation = get_generation(sosa)
     order = sosa - (2 ** (generation - 1))
     order
     return order
 
-def get_angle(sosa, theta0):
-    # tbd
-    pass
+def get_angle(sosa):
+    generation = get_generation(sosa)
+    number_in_generation = 2 ** (generation - 1)
+    if sosa > 1:
+        theta_span = theta2 * (2 ** generation - 1) / generation # ??? must be false
+        theta_start = theta_span * -0.5
+        theta_delta = theta_span / (number_in_generation - 1)
+        theta_sosa = theta_start + theta_delta * get_order_in_generation(sosa)
+        return thota_sosa
+    else:
+        return 0
+    # thota_sosa in degrees
 
+get_angle(2)
+get_angle(3)
     
 get_order_in_generation(30)
                  
