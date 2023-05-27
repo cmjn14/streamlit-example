@@ -21,17 +21,24 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 
 
-def generation_from_sosa(sosa):
+def get_generation(sosa):
     generation = int(math.log(sosa,2)) + 1
     return generation
 
-def order_in_generation(sosa):
-    generation = generation_from_sosa(sosa)
+def get_order_in_generation(sosa):
+    # starting 0
+    # used to determine angle in the graph
+    generation = get_generation(sosa)
     order = sosa - (2 ** (generation - 1))
     order
     return order
+
+def get_angle(sosa):
+    # tbd
+    pass
+
     
-order_in_generation(30)
+get_order_in_generation(30)
                  
                      
 def render_scatter():
