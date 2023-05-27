@@ -20,7 +20,7 @@ In the meantime, below is an example of what you can do with just a few lines of
 # Python GEDCOM parser : https://pypi.org/project/python-gedcom/
 
 # initial angle between sosa 2 and 3 (generation 2), in degrees
-theta2 = 30
+theta2 = 180
 final_year = 2000
 
 def get_generation(sosa):
@@ -43,16 +43,11 @@ def get_angle(sosa):
     number_in_generation = 2 ** (generation - 1)
     if sosa > 1:
         theta_span = theta2 * (2 ** (generation - 1) - 1) / (generation - 1) # ??? must be false
-        theta_span
         theta_start = theta_span * -0.5
-        theta_start
         theta_delta = theta_span / (number_in_generation - 1)
-        theta_delta
         order = get_order_in_generation(sosa)
-        order
         theta_sosa = theta_start + theta_delta * order
-        st.write("result")
-        theta_sosa
+        st.write("result: ", theta_sosa)
         return theta_sosa
     else:
         return 0
