@@ -43,7 +43,9 @@ def get_angle(sosa):
         theta_span = theta2 * (2 ** (generation - 1) - 1) / (generation - 1) # ??? must be false
         theta_span
         theta_start = theta_span * -0.5
+        theta_start
         theta_delta = theta_span / (number_in_generation - 1)
+        theta_delta
         theta_sosa = theta_start + theta_delta * get_order_in_generation(sosa)
         return theta_sosa
     else:
