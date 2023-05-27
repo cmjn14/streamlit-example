@@ -31,7 +31,7 @@ def order_in_generation(sosa):
     order
     return order
     
-order_in_generation(2)
+order_in_generation(30)
                  
                      
 def render_scatter():
